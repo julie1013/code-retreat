@@ -1,6 +1,6 @@
 class World
   attr_reader :board
-  def initialize(n, val)
+  def initialize(n)
    @board = []
    n.times do |row_index|
      row = []
@@ -30,5 +30,7 @@ class Neighborhood
     @neighbors << [cell.coordinates[0] - 1 , cell.coordinates[1] - 1]
     @neighbors << [cell.coordinates[0] , cell.coordinates[1] - 1]
     @neighbors << [cell.coordinates[0] + 1 , cell.coordinates[1] - 1]
+
+
   end
 end
