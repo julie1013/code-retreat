@@ -1,10 +1,10 @@
 class World
   attr_reader :board
-  def initialize(n)
+  def initialize(n, val)
    @board = []
    n.times do |row_index|
      row = []
-     n.times { |column_index| row << Cell.new(row_index, column_index) } # or row.push(val)
+     n.times { |column_index| row << val } # or row.push(val)
      @board << row # or board.push(val)
    end
   end
