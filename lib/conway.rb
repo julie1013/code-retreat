@@ -4,16 +4,16 @@ class World
      @board = []
      n.times do |row_index|
        row = []
-       n.times { |column_index| row << val } # or row.push(val)
+       n.times { |column_index| row << Cell.new(row_index, column_index) } # or row.push(val)
        @board << row # or board.push(val)
      end
      @board
    end
 
    class Cell
-     def initalize(row, column)
+     def initalize(row_index, column_index)
        @status = false # cell starts off dead
-       @coordinates = [] # this is used to (ultimately, hopefully) find the cell's neighbors so we can check their status?
+       @coordinates = [row_index, column_index] # this is used to (ultimately, hopefully) find the cell's neighbors so we can check their status?
      end
    end
 end
