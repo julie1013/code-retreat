@@ -1,12 +1,13 @@
 class Board
-  def initialize_board(n, val)
-    board = []
+  attr_reader :board
+  def initialize(n, val)
+    @board = []
     n.times do |row_index|
       row = []
-      n.times { |column_index| row << Cell.new } # or row.push(val)
-      board << row # or board.push(val)
+      n.times { |column_index| row << val } # or row.push(val)
+      @board << row # or board.push(val)
     end
-    board
+    @board
   end
 
   class Cell
@@ -22,4 +23,12 @@ end
 
 #ASSHOLES!!!!!
 #class cell? type please inside board what you had
-#aligh?
+#now....?
+
+# I tested it before-- it worked
+#how do i get out of there so I don't have to return through 6400 cells?
+#nested array. need to make sure there are 6400 cells. This should be
+#80 X 80
+
+#so that was just a test but it shows that the first row at least (presumably of 80 rows)
+# has 80 values..
