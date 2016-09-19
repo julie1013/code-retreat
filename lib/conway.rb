@@ -19,12 +19,16 @@ class Cell
 end
 
 class Neighborhood
+  attr_reader :cell
   def initialize(cell)
     # not worrying about edge cases right now
+    @cell = cell
     @neighbors = []
   end
 
   def find_neighbors
-    
+    @neighbors << [cell.coordinates[0] - 1 , cell.coordinates[1] - 1]
+    @neighbors << [cell.coordinates[0] , cell.coordinates[1] - 1]
+    @neighbors << [cell.coordinates[0] + 1 , cell.coordinates[1] - 1]
   end
 end
